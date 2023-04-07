@@ -12,13 +12,16 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{line-height:1.5;margin:0}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{line-height:1.5;margin:0;font-weight: 400;}
 h1 {
     font-size: 30px;
     font-weight: 600;
 }
 h4 {
     font-size: 18px;
+}
+h1, h2, h3, h4 {
+    color: #fff;
 }
 p {
     font-size: 14px;
@@ -800,6 +803,7 @@ table.scoreboard thead th {
 }
 .pagination{
   border-radius: 50%;
+  margin-bottom:0
 }
 /* end page */
 .cat-item {
@@ -1128,12 +1132,31 @@ p.copyright .dsb-panel {
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
   box-shadow: 2px 2px 5px 0 rgb(0 0 0 / 5%);
+}
+.pagination-wrapper {
+    margin-top: 48px;
+    margin-bottom: 8px;
+}
+.page-link.disabled {
+    background: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem !important;
+	min-height:2.5em;
+	min-width:2.5em;
+}
+.page-link.disabled.active {
+    background: #313169;
 }
 .section-title p {
     font-size: 14px;
     font-weight: 400;
+    color: rgba(255,255,255,0.71);
+    padding-bottom: 12px;
 }
 
 a.nav-link .btn-circle{

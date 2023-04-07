@@ -18,7 +18,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="category-description">
-						<?php echo $category->description; ?>
+						<h4><?php echo $category->description; ?></h4>
 					</div>
 				</div>
 			</div>
