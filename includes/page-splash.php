@@ -98,13 +98,13 @@ if($game){
 					<div class="splash" id="splash">
 						<div class="splash-content">
 							<div class="splash-thumbnail">
-								<img src="<?php echo $game->thumb_2 ?>">
+								<img src="<?php echo DOMAIN . $game->thumb_2 ?>">
 							</div>
 							<button class="btn-play" onclick="play_game()"><?php _e("Play") ?></button>
 						</div>
 						<div class="splash-game-title"><?php echo $game->title ?></div>
 					</div>
-					<iframe id="game-content" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" data-src="<?php echo $url ?>"></iframe>
+					<iframe id="game-content" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" data-src="<?php echo DOMAIN . $url ?>"></iframe>
 					<script type="text/javascript">
 						function play_game(){
 							document.getElementById("splash").remove();

@@ -28,6 +28,9 @@ p:last-child{margin:0}
 a {
   text-decoration: none;
 }
+a:hover {
+    color: #6758FA;
+}
 img {
   max-width: 100%;
 }
@@ -634,6 +637,9 @@ section.recomendation .game-item {
     margin-bottom: 30px;
     margin-top: 20px;
 }
+.game-info .single-title {
+	margin-bottom:10px;
+}
 .single-title {
   color: #fff;
   font-size: 24px;
@@ -645,12 +651,23 @@ section.recomendation .game-item {
 }
 .game-info .rating {
     margin-bottom: 10px;
+    font-size: 14px;
+    color: #9595D1;
 }
 .game-info .rating i {
     margin-right: 5px;
 }
+.game-info .rating i.star-off {
+    margin-right: 5px;
+    color: #5c5b73;
+}
 .game-info .b-action a {
     margin-top: 10px;
+}
+.game-info .b-action a.btn-capsule {
+    padding: 8px 18px;
+    background: #21212f;
+    font-size: 1em;
 }
 .game-info .btn-circle {
     width: 40px;
@@ -673,22 +690,86 @@ section.recomendation .game-item {
     float: left;
     text-align: right;
 }
-.header-right .btn-capsule{
+.header-right .btn-capsule {
     display: inline-block;
     font-size: 14px;
     margin-left: 15px;
     margin-bottom: 15px;
+    padding: 8px 20px;
+    background: #262653;
+    height: 48px;
+}
+.header-right .btn-capsule i {
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 0 5px;
 }
 .b-icon {
     margin-right: 8px;
+}
+.game-details {
+    clear: both;
+}
+.game-details h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 200%;
+}
+.game-details {
+    clear: both;
+}
+.single-description {
+    font-size: 14px;
+	line-height:200%;
+}
+.single-instructions {
+	line-height:200%;
+    font-size: 14px;
 }
 .highlight-text {
     color: #fff;
 }
 .game-category-list {
-  display: inline-flex;
-  margin-top: 10px;
+    display: block;
+    margin-top: 0;
+	line-height: 200%;
 }
+.single-leaderboard {
+    line-height: 200%;
+}
+.scoreboard.table {
+    background: unset;
+    border-radius: 15px;
+    overflow: hidden;
+}
+table.scoreboard {
+    margin: 20px 0;
+    width: 100%;
+    color: unset;
+}
+table.scoreboard thead {
+    background: #262653;
+}
+table.scoreboard tbody tr {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+table.scoreboard tbody {
+    background: #1f1e42;
+}
+table.scoreboard thead th {
+    border: none;
+    color: #fff;
+}
+.table th,.table td{
+	padding:.5em .75em;
+	border: unset;
+}
+.table {
+	color: #363636;
+	color:unset;
+}
+
 /* page */
 .page-link.active {
 	background-color: #313169;
@@ -723,13 +804,29 @@ section.recomendation .game-item {
 /* end page */
 .cat-item {
     background-color: #262653;
+    font-size: 14px;
     padding: 10px 20px;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 14px;
     color: #fff;
+    display: inline;
+}
+.single-comments {
+    margin-bottom: 42px;
 }
 .widget-title {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+}
+.widget-gamelist .sub-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.71);
+    font-weight: 300;
+}
+.widget-gamelist .list-title.ellipsis {
+    font-size: 16px;
 }
 .sm-widget {
     margin-bottom: 30px;
