@@ -1,0 +1,11 @@
+{
+	"name": "Arcade X",
+	"version": "1.0.0",
+	"author": "CloudArcade",
+	"description": "Premium theme",
+	"website": "https://cloudarcade.net",
+	"release_date": "11/01/2022",
+	"changelog": "Fix bugs",
+	"type":"theme",
+	"target_version": "1.5.3"
+}

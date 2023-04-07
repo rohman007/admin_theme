@@ -1,0 +1,13 @@
+{
+	"name": "Backup Restore",
+	"version": "1.0.4",
+	"author": "CloudArcade",
+	"description": "Backup and restore for CloudArcade CMS.",
+	"website": "https://cloudarcade.net",
+	"require_version": "1.5.4",
+	"tested_version": "1.5.4",
+	"last_update": "15/02/2022",
+	"type": "plugin",
+	"target": "admin",
+	"require_login": true
+}
