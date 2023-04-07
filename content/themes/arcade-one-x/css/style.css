@@ -285,6 +285,10 @@ li.nav-item:hover {
     background: var(--color2);
     border-radius: 30px;
 }
+li.nav-item a.nav-link {
+	border-radius:50px;
+	color:#fff;
+}
 li.nav-item a {
     display: inline-block;
     padding: 13px 20px !important;
@@ -298,8 +302,12 @@ li.nav-item a {
   background: var(--color2);
   min-width: 200px;
 }
+a.nav-link.dropdown-toggle.show{background:#262653;border-radius:50px}
+.dropdown-menu li:last-child .dropdown-item {border:0}
+.dropdown-menu .dropdown-item:hover {background:#313169;color:#fff}
 .dropdown-menu .dropdown-item {
   padding: 13px 25px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
 }
 .user-dropdown {
     position: absolute;
@@ -1001,6 +1009,13 @@ p.copyright .dsb-panel {
 	.navbar-expand-lg .navbar-nav {
 		display: block;
 		text-align: right;
+	}
+	.navbar-expand-lg .navbar-nav .dropdown-menu {
+		position: absolute;
+		overflow:hidden;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0;
 	}
 }
 /* Profile */
