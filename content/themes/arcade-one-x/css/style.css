@@ -814,6 +814,12 @@ section.recomendation .game-item {
     -webkit-border-radius: 50%;
     margin-right: 15px;
     color: #fff;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game-info .btn-circle i:before {
+    display: block;
 }
 .header-left {
     width: 50%;
@@ -946,6 +952,15 @@ table.scoreboard thead th {
     color: #fff;
     display: inline;
 }
+.game-details .comments-container h5 {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.jquery-comments .highlight-background {
+    background: #2793e6 !important;
+}
 .single-comments {
     margin-bottom: 42px;
 }
@@ -1059,6 +1074,78 @@ p.copyright {
 }
 .comment-wrapper .content {
   margin-bottom: 10px;
+}
+/*=== TOP PLAYER ===*/
+.top-3 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.top-user {
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    position: relative;
+    white-space: nowrap;
+}
+.top-avatar img {
+    border-radius: 50%;
+    display: block;
+}
+.top-number {
+    width: 40px;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+.top-username {
+    font-weight: bold;
+    margin-top: 30px;
+}
+.top-xp {
+    font-style: italic;
+}
+.rank-1 .top-avatar img {
+    width: 120px;
+}
+.top-number img {
+    margin-bottom: 7px;
+}
+.leaderboard-table {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+.leaderboard-row {
+    background: #262653;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+    white-space: nowrap;
+	position:relative;
+}
+.leaderboard-cell {
+    vertical-align: middle;
+    padding: 0 10px;
+    display: inline-block;
+}
+.leaderboard-user-avatar img {
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+}
+.leaderboard-cell.username {
+    font-weight: bold;
+    min-width: 160px;
+}
+.leaderboard-cell.rank {
+    float: right;
+}
+.level-badge {
+    float: left;
+    margin-right: 10px;
 }
 /*=== BLOG ===*/
 section.post-list .section-title.page-title {
@@ -1267,6 +1354,21 @@ section.section-search .row {
 	.g-content section.mid-ct {
 		padding-top: 33px !important;
 	}
+.top-user {
+    width: 80px;
+    margin: 10px;
+}
+.leaderboard-cell.username {
+    min-width: unset;
+}
+.leaderboard-cell.user-xp {
+    margin-top: 12px;
+    position: absolute;
+    right: 0;
+}
+.leaderboard-cell.rank {
+    display: none;
+}
 }
 @media only screen and (max-width: 992px){
   .left-sidebar {
@@ -1301,12 +1403,12 @@ section.section-search .row {
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
-  }
-  .sidebar-right.show {
-    left: 0;
     transition: var(--anim);
     -moz-transition: var(--anim);
     -webkit-transition: var(--anim);
+  }
+  .sidebar-right.show {
+    left: 0;
   }
   .g-content {
     width: 100%;

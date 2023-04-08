@@ -195,7 +195,7 @@ function show_leaderboard(data){
 	$('.delete-comment').on('click', function() {
 		let id = $(this).attr('data-id');
 		$.ajax({
-			url: '/includes/comment.php',
+			url: '/admin_theme/includes/comment.php',
 			type: 'POST',
 			dataType: 'json',
 			data: {'delete': true, 'id': id},
@@ -216,7 +216,7 @@ function show_leaderboard(data){
 	if($('#comments').length){
 		game_id = $('.game-content').attr('data-id');
 		$.ajax({
-			url: '/includes/comment.php',
+			url: '/admin_theme/includes/comment.php',
 			type: 'POST',
 			dataType: 'json',
 			data: {'load': true, 'game_id': game_id},

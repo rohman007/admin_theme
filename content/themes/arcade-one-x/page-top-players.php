@@ -14,7 +14,7 @@ if (count($row) >= 3) {
 
 ?>
 
-	<section class="mid-ct section-post">
+	<section class="mid-ct top-player">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-9">
