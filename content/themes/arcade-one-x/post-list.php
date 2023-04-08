@@ -51,7 +51,7 @@
 						<div class="post-intro">
 							<p><?php echo mb_strimwidth(strip_tags($post->content), 0, 180, "...") ?></p>
 						</div>
-						<a class="mt-4 read-more-link btn btn-primary" href="<?php echo get_permalink('post', $post->slug) ?>"><?php _e('Read More') ?></a>
+						<a class="mt-4 read-more-link btn btn-capsule" href="<?php echo get_permalink('post', $post->slug) ?>"><?php _e('Read More') ?></a>
 						</div>
 					</div>
 				<?php
@@ -103,7 +103,7 @@
 											$current = 'active';
 										}
 									}
-									echo '<li class="page-item '.$current.'"><a class="page-link" href="'. get_permalink('post', '', array('page' => $i+1)) .'">'.($i+1).'</a></li>';
+									echo '<li class="page-item "><a class="page-link '.$current.'" href="'. get_permalink('post', '', array('page' => $i+1)) .'">'.($i+1).'</a></li>';
 								}
 								if($end < $total_page){
 									echo('<li class="page-item disabled"><span class="page-link">...</span></li>');

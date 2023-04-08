@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-9">
-                <div class="page-title">
-                    <h2>
+                <div class="section-title page-title">
+                    <h3>
                         <span class="g-icon"><img src="<?php echo get_template_path(); ?>/images/icon/page.svg" alt=""></span> <?php echo htmlspecialchars( $page->title )?>
-                    </h2>
+                    </h3>
                 </div>
                 <div class="article">
                     <div class="page-content">
