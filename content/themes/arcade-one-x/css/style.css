@@ -437,8 +437,13 @@ a.nav-link.dropdown-toggle.show{background:#262653;border-radius:50px}
 .profile-menu .profile-header, .profile-menu .item a {
   display: inline-block;
   width: 100%;
+  font-size:14px;
   padding: 13px 20px;
   color: #fff;
+}
+ul.profile-menu h5 {
+    font-size: 18px;
+    font-weight: 600;
 }
 .user-dropdown .item a {
   color: #fff;
@@ -588,11 +593,12 @@ code {
     right: 20px;
     top: -24px;
 }
+.user-page .btn-capsule {min-width:auto}
 .btn-capsule {
     display: inline-block;
     /* padding: 9px 20px; */
     padding: 13px 20px;
-    /* min-width: 120px; */
+    min-width: 120px;
     color: #fff;
     background: var(--solid);
     background: var(--linear);
@@ -604,6 +610,24 @@ code {
     transition: var(--anim);
     -moz-transition: var(--anim);
     -webkit-transition: var(--anim);
+}
+.login-form input.form-control:active,.login-form input.form-control:focus {
+	color:#000;
+	font-weight:normal;
+}
+.login-form input.form-control {
+    background: #fff;
+    border: 1px solid #ddd;
+	color:#000;
+	font-weight:normal;
+}
+.login-form label.form-check-label {
+    color: #212529;
+    font-weight: 300;
+}
+.login-form .form-check {
+    padding-left: 25px;
+    display: block;
 }
 .btn-capsule:hover {
     color: #fff;
@@ -1107,7 +1131,35 @@ section.mid-ct.section-post {
     color: rgba(255,255,255,0.71);
     font-weight: 300;
 }
+
+/*=== SEARCH ===*/
+section.section-search .section-title {padding-top:5px;margin-bottom:0}
+section.section-search .row {
+    margin-top: 0;
+    margin-left: -12px;
+    margin-right: 12px;
+    width: calc(100% + 24px);
+}
 @media (max-width: 1024px){
+	section.section-search .section-title {
+		padding-top: 2px;
+		margin-bottom: 18px;
+	}
+	.g-content  section.sidebar-right {
+		padding-top: 20px;
+		padding-left: 30px !important;
+		overflow-y: auto;
+		padding-right: 30px !important;
+		padding-bottom:24px;
+	}
+	li.nav-item a {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		width:100%;
+	}
+	.search-bar input.search {
+		border: 1px solid rgba(255,255,255,0.2);
+	}
 	.user-page .section-title {
 		padding-top: 2px;
 		margin-bottom: 38px;
@@ -1317,11 +1369,15 @@ section.mid-ct.section-post {
   }
   .user-dropdown::before {
     left: 35px;
-    background: #313169;
+    /* background: #313169; */
+  }
+  .user-avatar {
+	margin-left: 10px;
   }
   .search-bar {
     max-width: 100%;
     margin-bottom: 35px;
+	padding-right:0;
   }
   .dropdown-menu.show {
     background: #313169;
@@ -1369,7 +1425,8 @@ section.mid-ct.section-post {
 }
 .page-link {
     background: transparent;
-    color: #fff;
+    color: #fff !important;
+	font-weight:400;
     display: flex;
     align-items: center;
     justify-content: center;
