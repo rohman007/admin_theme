@@ -45,9 +45,14 @@ if($cur_user){
 	if(isset($_GET['edit']) && !$is_visitor){
 		//Edit user profile
 		?>
-		<div class="user-page">
+		<section class="user-page edit-page">
 			<div class="container">
-				<h3 class="single-title">Edit Profile</h3>
+				<div class="section-title page-title">
+					<h2>
+						<span class="g-icon"><img src="<?php echo get_template_path(); ?>/images/icon/user.svg" alt=""></span> Edit Profile
+					</h2>
+				</div>
+						
 				<?php
 					if(isset($_GET['status'])){
 						$type = 'success';
@@ -73,27 +78,27 @@ if($cur_user){
 					<form id="form-settings" action="<?php echo DOMAIN.'includes/user.php' ?>" method="post">
 						<input type="hidden" name="action" value="edit_profile">
 						<input type="hidden" name="redirect" value="<?php echo get_permalink('user', $login_user->username) ?>&edit">
-						<div class="mb-3 row">
-							<label for="email" class="col-sm-2 col-form-label"><?php _e('Email') ?>:</label>
-							<div class="col-sm-10">
+						<div class="form-group">
+							<label for="email" class="form-label"><?php _e('Email') ?>:</label>
+							<div class="control">
 								<input type="text" class="form-control" name="email" minlength="4" value="<?php echo $login_user->email ?>">
 							</div>
 						</div>
-						<div class="mb-3 row">
-							<label for="birth_date" class="col-sm-2 col-form-label"><?php _e('Birth date') ?>:</label>
-							<div class="col-sm-10">
+						<div class="form-group">
+							<label for="birth_date" class="form-label"><?php _e('Birth date') ?>:</label>
+							<div class="control">
 								<input type="date" class="form-control" name="birth_date" value="<?php echo $login_user->birth_date ?>" required>
 							</div>
 						</div>
-						<div class="mb-3 row">
-							<label for="bio" class="col-sm-2 col-form-label"><?php _e('About me') ?>:</label>
-							<div class="col-sm-10">
+						<div class="form-group">
+							<label for="bio" class="form-label"><?php _e('About me') ?>:</label>
+							<div class="control">
 								<textarea class="form-control" name="bio" rows="3"><?php echo $login_user->bio ?></textarea>
 							</div>
 						</div>
-						<div class="mb-3 row">
-							<label for="gender" class="col-sm-2 col-form-label"><?php _e('Gender') ?>:</label>
-							<div class="col-sm-10">
+						<div class="form-group">
+							<label for="gender" class="form-label"><?php _e('Gender') ?>:</label>
+							<div class="control">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" name="gender" id="gender1" value="male">
 									<label class="form-check-label" for="gender1">
@@ -114,29 +119,32 @@ if($cur_user){
 								</div>
 							</div>
 						</div>
-						<button type="submit" class="btn btn-primary btn-md"><?php _e('Update') ?></button>
+						<div class="divider"></div>
+						<button type="submit" class="btn btn-capsule btn-md"><?php _e('Update') ?></button>
 					</form>
 				</div>
 				</div>
 				<div class="col-md-4">
 					<?php if($options['upload_avatar'] === 'true'){ ?>
 						<div class="section">
-							<h3 class="section-title"><?php _e('Upload Avatar') ?></h3>
+							<h3 class="sub-section-title"><?php _e('Upload Avatar') ?></h3>
 							<form action="<?php echo DOMAIN.'includes/user.php' ?>" method="post" enctype="multipart/form-data">
 								<div class="mb-3">
 									<input type="hidden" name="action" value="upload_avatar">
 									<input type="hidden" name="redirect" value="<?php echo get_permalink('user', $login_user->username) ?>&edit">
-									<label for="file"><?php _e('Supported format') ?>: png, jpg, jpeg (Max 500kb)</label><br>
+									<label for="file" class="sub-text"><?php _e('Supported format') ?>: png, jpg, jpeg (Max 500kb)</label><br>
+									<div class="divider"></div>
 									<input type="file" class="form-control" name="avatar" accept=".png,.jpg,.jpeg"/><br>
-									<button type="submit" class="btn btn-primary btn-md"><?php _e('Upload') ?></button>
+									<button type="submit" class="btn btn-capsule btn-md"><?php _e('Upload') ?></button>
 								</div>
 							</form>
 						</div>
 					<?php } ?>
 					<div class="section">
-						<h3 class="section-title"><?php _e('Choose Avatar') ?></h3>
+						<h3 class="sub-section-title"><?php _e('Choose Avatar') ?></h3>
+						<div class="divider"></div>
 						<form action="<?php echo DOMAIN.'includes/user.php' ?>" method="post" enctype="multipart/form-data">
-							<div class="mb-3">
+							<div class="">
 								<input type="hidden" name="action" value="choose_avatar">
 								<input type="hidden" name="redirect" value="<?php echo get_permalink('user', $login_user->username) ?>&edit">
 								<div class="row avatar-chooser">
@@ -159,42 +167,43 @@ if($cur_user){
 									}
 								?>
 								</div>
-								<br>
-								<button type="submit" class="btn btn-primary btn-md"><?php _e('Change avatar') ?></button>
+								<button type="submit" class="btn btn-capsule btn-md mt-2"><?php _e('Change avatar') ?></button>
 							</div>
 						</form>
 					</div>
 					<div class="section">
-						<h3 class="section-title"><?php _e('Change password') ?></h3>
+						<h3 class="sub-section-title"><?php _e('Change password') ?></h3>
+						<div class="divider"></div>
 						<form action="<?php echo DOMAIN.'includes/user.php' ?>" method="post" enctype="multipart/form-data">
-							<div class="mb-3">
+							<div class="">
 								<input type="hidden" name="action" value="change_password">
 								<input type="hidden" name="redirect" value="<?php echo get_permalink('user', $login_user->username) ?>&edit">
-								<div class="mb-3">
-									<label><?php _e('Current password') ?>:</label>
+								<div class="form-group">
+									<label class="form-label"><?php _e('Current password') ?>:</label>
 									<input type="password" class="form-control" name="cur_password" autocomplete="new-password" minlength="6" value="" required>
 								</div>
-								<div class="mb-3">
-									<label><?php _e('New password') ?>:</label>
+								<div class="form-group">
+									<label class="form-label"><?php _e('New password') ?>:</label>
 									<input type="password" class="form-control" name="new_password" minlength="6" value="" required>
 								</div>
-								<button type="submit" class="btn btn-primary btn-md"><?php _e('Update') ?></button>
+								<button type="submit" class="btn btn-capsule btn-md mt-2"><?php _e('Update') ?></button>
 							</div>
 						</form>
 					</div>
 					<?php if(!USER_ADMIN){ ?>
 
 					<div class="section">
-						<h3 class="section-title"><?php _e('Delete account') ?></h3>
+						<h3 class="sub-section-title"><?php _e('Delete account') ?></h3>
+						<div class="divider"></div>
 						<form action="<?php echo DOMAIN.'includes/user.php' ?>" method="post" enctype="multipart/form-data">
-							<div class="mb-3">
+							<div class="">
 								<input type="hidden" name="action" value="delete_account">
 								<input type="hidden" name="redirect" value="<?php echo get_permalink('user', $login_user->username) ?>&edit">
-								<div class="mb-3">
-									<label><?php _e('Your password') ?>:</label>
+								<div class="form-group">
+									<label class="form-label"><?php _e('Your password') ?>:</label>
 									<input type="password" class="form-control" name="cur_password" autocomplete="new-password" minlength="6" value="" required>
 								</div>
-								<button type="submit" class="btn btn-danger btn-md"><?php _e('Delete') ?></button>
+								<button type="submit" class="btn btn-capsule btn-md mt-2"><?php _e('Delete') ?></button>
 							</div>
 						</form>
 					</div>
@@ -203,7 +212,7 @@ if($cur_user){
 				</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<?php
 	} else {
 		//User profile page
@@ -218,9 +227,13 @@ if($cur_user){
 		}
 		$percentage_rank_progress = (100/($max_value))*$min_value;
 		?>
-		<div class="user-page">
+		<section class="user-page">
 			<div class="container">
-				<h3 class="single-title"><?php _e('User Profile') ?></h3>
+				<div class="section-title page-title">
+					<h2>
+						<span class="g-icon"><img src="<?php echo get_template_path(); ?>/images/icon/user.svg" alt=""></span> <?php _e('User Profile') ?>
+					</h2>
+				</div>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="section">
@@ -247,10 +260,12 @@ if($cur_user){
 					</div>
 					<div class="col-md-8">
 						<div class="section">
-							<h3 class="section-title"><?php _e('Level') ?></h3>
+							<h3 class="sub-section-title"><?php _e('Level') ?></h3>
+							<div class="divider"></div>
 							<img src="<?php echo DOMAIN.'images/ranks/level-'.$cur_user->level.'.png' ?>" class="level-badge">
-							<strong><?php echo $cur_user->rank ?> (Lv.<?php echo $cur_user->level ?>)</strong>
+							<h4><?php echo $cur_user->rank ?> (Lv.<?php echo $cur_user->level ?>)</h4>
 							<p class="text-secondary"><?php _e('This player have exceeded %a xp', $rank[$cur_user->rank]) ?></p>
+							<div class="divider"></div>
 							<div class="progress">
 								<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $cur_user->xp ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $percentage_rank_progress ?>%">
 									<span class="sr-only"><?php echo $percentage_rank_progress ?>% <?php _e('Complete') ?></span>
@@ -259,7 +274,8 @@ if($cur_user){
 						</div>
 						<?php if(!$is_visitor){ ?>
 						<div class="section">
-							<h3 class="section-title"><?php _e('Favorite Games') ?></h3>
+							<h3 class="sub-section-title"><?php _e('Favorite Games') ?></h3>
+							<div class="divider"></div>
 							<div class="profile-gamelist-horizontal favorite-gamelist">
 
 							<?php
@@ -315,7 +331,8 @@ if($cur_user){
 						</div>
 						</div>
 						<div class="section">
-							<h3 class="section-title"><?php _e('Liked Games') ?></h3>
+							<h3 class="sub-section-title"><?php _e('Liked Games') ?></h3>
+							<div class="divider"></div>
 							<div class="profile-gamelist-horizontal profile-gamelist">
 
 							<?php
@@ -371,7 +388,7 @@ if($cur_user){
 						</div>
 						</div>
 						<div class="section">
-							<h3 class="section-title"><?php _e('Comments') ?></h3>
+							<h3 class="sub-section-title"><?php _e('Comments') ?></h3>
 							<div class="profile-comments">
 								<?php
 								$sql = 'SELECT * FROM comments WHERE sender_id = :sender_id ORDER BY id DESC LIMIT 30';
@@ -406,7 +423,7 @@ if($cur_user){
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<?php
 	}
 } else {
