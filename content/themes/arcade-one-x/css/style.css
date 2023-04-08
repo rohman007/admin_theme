@@ -957,6 +957,25 @@ table.scoreboard thead th {
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 500;
+    height: 40px;
+}
+.textarea {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    padding: calc(0.75em - 1px);
+    resize: vertical;
+}
+.jquery-comments .textarea-wrapper .close {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textarea:active, .textarea:focus {
+    border-color: #3273dc;
+    box-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
 }
 .jquery-comments .highlight-background {
     background: #2793e6 !important;
@@ -1061,6 +1080,9 @@ p.copyright {
 #comment-list > .comment {
     padding: 25px 0;
 }
+#comment-list > .comment:last-child {
+    padding-bottom: 10px;
+}
 .jquery-comments ul.main li.comment time {
     color: #fff;
 }
@@ -1073,7 +1095,7 @@ p.copyright {
   color: #fff;
 }
 .comment-wrapper .content {
-  margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 /*=== TOP PLAYER ===*/
 .top-3 {
