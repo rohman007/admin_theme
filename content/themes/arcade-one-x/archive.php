@@ -70,7 +70,7 @@
 							$current = 'active';
 							}
 						}
-						echo '<li class="page-item "><a class="page-link '.$current.' disabled rounded-circle" href="'. get_permalink('category', $_GET['slug'], array('page' => $i+1)) .'">'.($i+1).'</a></li>';
+						echo '<li class="page-item "><a class="page-link '.$current.' rounded-circle" href="'. get_permalink('category', $_GET['slug'], array('page' => $i+1)) .'">'.($i+1).'</a></li>';
 						}
 						if($end < $total_page){
 						echo('<li class="page-item "><span class="page-link rounded-circle">...</span></li>');

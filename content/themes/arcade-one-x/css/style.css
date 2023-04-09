@@ -888,13 +888,13 @@ table.scoreboard {
     width: 100%;
     color: unset;
 }
-table.scoreboard thead {
+table.scoreboard thead,table.scoreboard thead th{
     background: #262653;
 }
 table.scoreboard tbody tr {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
-table.scoreboard tbody {
+table.scoreboard tbody,table.scoreboard tbody th,table.scoreboard tbody td{
     background: #1f1e42;
 }
 table.scoreboard thead th {
@@ -1547,7 +1547,7 @@ section.section-search .row {
     margin-top: 48px;
     margin-bottom: 8px;
 }
-.page-link {
+.page-link,.page-link.disabled {
     background: transparent;
     color: #fff !important;
 	font-weight:400;

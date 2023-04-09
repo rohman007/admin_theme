@@ -39,7 +39,7 @@
 		<?php if(file_exists(ABSPATH . PLUGIN_PATH . 'posts')){
 			echo '<link rel="stylesheet" type="text/css" href="'.DOMAIN.'content/plugins/posts/css/suneditor-content.css">';
 		} ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_path(); ?>/css/user.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_path(); ?>/css/user.css?v=<?= rand() ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_path(); ?>/css/style.css?v=<?= rand() ?>">
 		<!--<link rel="stylesheet" type="text/css" href="<?php echo get_template_path(); ?>/css/skin/<?php echo $selected_skin ?>.css" media="print" onload="this.media='all'">-->
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_path(); ?>/css/custom.css" media="print" onload="this.media='all'">
