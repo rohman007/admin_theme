@@ -42,7 +42,7 @@
 	<script type="text/javascript" src="<?php echo DOMAIN . TEMPLATE_PATH ?>/js/popper.min.js"></script>
 	<script type="text/javascript" src="<?php echo DOMAIN . TEMPLATE_PATH ?>/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo DOMAIN ?>js/jquery-comments.min.js"></script>
-	<script type="text/javascript" src="<?php echo DOMAIN . TEMPLATE_PATH ?>/js/script.js"></script>
+	<script type="text/javascript" src="<?php echo DOMAIN . TEMPLATE_PATH ?>/js/script.js?v=<?= rand() ?>"></script>
 	<script type="text/javascript" src="<?php echo DOMAIN . TEMPLATE_PATH ?>/js/custom.js"></script>
 	<script type="text/javascript" src="<?php echo DOMAIN ?>js/stats.js"></script>
 	<?php load_plugin_footers() ?>
