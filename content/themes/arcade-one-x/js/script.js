@@ -23,7 +23,7 @@ function load_leaderboard(conf){
 	}
 }
 function show_leaderboard(data){
-	let html = '<table class="table table-striped table-dark"><thead class="thead-dark"><tr><th scope="col">#</th><th scope="col">Username</th><th scope="col">Score</th><th scope="col">Date</th></tr></thead><tbody>';
+	let html = '<table class="scoreboard table"><thead class=""><tr><th scope="col">#</th><th scope="col">Username</th><th scope="col">Score</th><th scope="col">Date</th></tr></thead><tbody>';
 	let index = 1;
 	data.forEach((item)=>{
 		html += '<tr><th scope="row">'+index+'</th><td>'+item.username+'</td><td>'+item.score+'</td><td>'+item.created_date.substr(0, 10)+'</td></tr>';

@@ -82,32 +82,7 @@
 							<?php echo nl2br( $game->instructions )?>
 						</div>
 						<div class="single-leaderboard">
-							<div id="content-leaderboard" class="table-responsive" data-id="<?php echo $game->id ?>">
-								<table class="scoreboard table">
-									<thead>
-										<tr>
-											<th scope="col">#</th>
-											<th scope="col">Username</th>
-											<th scope="col">Score</th>
-											<th scope="col">Date</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="row">1</th>
-											<td>kevin</td>
-											<td>42</td>
-											<td>2023-01-27</td>
-										</tr>
-										<tr>
-											<th scope="row">2</th>
-											<td>maximus</td>
-											<td>10</td>
-											<td>2023-01-09</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+							<div id="content-leaderboard" class="table-responsive" data-id="<?php echo $game->id ?>"></div>
 						</div>
 						<h5 class="highlight-text"><?php _e('Categories') ?>:</h5>
 						<div class="game-category-list"> 
